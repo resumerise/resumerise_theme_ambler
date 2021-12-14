@@ -10,32 +10,37 @@
                     <%~ include('key-value-item', {
                         label: it.resume.settings?.labels?.categoryProperty?.work?.company, 
                         value: work.company,
-                        classes: 'article__title'
+                        classes: 'article__title left-container__title--marker'
                     }) %>
+                    </div>
+                    <div class="article-container--border">
+                    <div class="article-sub-header left-container__sub-header">
                     <%~ include('key-value-item', {
                         label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
                         value: work.position,
-                        classes: 'article__subtitle'
+                        classes: 'article__subtitle left-container__sub-header__subtitle'
                     }) %>
-                    <%~ include('key-url-item', {
-                        label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
-                        value: work.website,
-                        classes: 'article__url'
-                    }) %>
-                    <%~ include('date-range', {
+                    
+                     <%~ include('date-range', {
                         formatDate: it.formatDate,
                         startDate: work.startDate,
                         endDate: work.endDate,
                         present: work.present,
                         settings: it.resume.settings,
-                        classes: 'article__date'
+                        classes: 'article__date left-container__sub-header__date'
                     }) %>
-                </div>
+                    </div>
+                    <%~ include('key-url-item', {
+                        label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
+                        value: work.website,
+                        classes: 'article__url'
+                    }) %>
+                
                 <div class="article-content s-grid">
                     <%~ include('key-value-item', {
                         label: it.resume.settings?.labels?.categoryProperty?.work?.summary, 
                         value: work.summary,
-                        classes: 'article__text'
+                        classes: 'article__text left-container__summary'
                     }) %>
                     <%~ include('list', {
                         label: it.resume.settings?.labels?.categoryProperty?.work?.highlights, 
@@ -43,6 +48,7 @@
                         showLabel: true,
                         classes: 'article__list'
                     }) %>
+                </div>
                 </div>
             </article>
         <% }) %>

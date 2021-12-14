@@ -12,42 +12,44 @@
 	</head>
 	<body>
 		<main>
-			<!-- BASICS -->
-			<%~ include("basic", {
-				resume: it.resume,
-				formatDate: it.formatDate
-			}) %>
-			
-			<!-- PROJECT -->
+		<div class="header">
+		<!-- BASICS -->
+		<%~ include("basic", {
+			resume: it.resume,
+			formatDate: it.formatDate
+		}) %> 
+		</div>
+		<div class="main-div">
+
+		<div class="left-section--container">
+		<!-- PROJECT -->
 			<%~ include("project", {
 				resume: it.resume,
 				formatDate: it.formatDate
 			}) %>
-
 			<!-- WORK -->
 			<%~ include("work", {
 				resume: it.resume,
 				formatDate: it.formatDate
 			}) %>
-
 			<!-- EDUCATION -->
 			<%~ include("education", {
 				resume: it.resume,
 				formatDate: it.formatDate
 			}) %>
-			
-			<!-- PUBLICATION -->
-			<%~ include("publication", {
-				resume: it.resume,
-				formatDate: it.formatDate
-			}) %>
-			
 			<!-- REFERENCE -->
 			<%~ include("reference", {
 				resume: it.resume,
 				formatDate: it.formatDate
 			}) %>
-			
+		</div>
+		<div class="right-section--container">
+			<!-- PUBLICATION -->
+			<%~ include("publication", {
+				resume: it.resume,
+				formatDate: it.formatDate
+			}) %>
+				
 			<!-- VOLUNTEER -->
 			<%~ include("volunteer", {
 				resume: it.resume,
@@ -89,6 +91,9 @@
 				resume: it.resume,
 				formatDate: it.formatDate
 			}) %>
+		</div>
+			</div>
+
 		</main>
 	</body>
 </html>
