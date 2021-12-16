@@ -6,6 +6,7 @@
         <header class="section__title"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></header>
     <% } %>
     <div class="article-container grid basics-article--container">
+    <div class="basics__title__subtitle">
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.basics}) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.name, 
@@ -17,6 +18,8 @@
             value: it.resume.basics.label,
             classes: 'article__text basics__article__subtitle'
         }) %>
+        </div>
+        <div class="contact--details">
         <%~ include('key-url-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 
             value: it.resume.basics.website,
@@ -35,10 +38,12 @@
             classes: 'article__phone',
             iconClass: 'fas fa-phone'
         }) %>
-        <%~ include('key-value-item', {
+               <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.summary, 
             value: it.resume.basics.summary,
             classes: 'article__text'
         }) %>
+        </div>
+ 
     </div>
 </section>
