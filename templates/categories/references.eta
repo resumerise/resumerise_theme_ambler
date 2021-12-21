@@ -21,7 +21,7 @@
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.reference?.reference, 
 						value: reference.reference,
-						classes: 'article__subtitle left-container__summary references__text'
+						classes: 'article__text left-container__summary references__text'
 					}) %>
 				</div>
 				</div>

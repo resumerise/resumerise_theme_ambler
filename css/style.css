@@ -128,22 +128,19 @@ body {
     margin: 12mm 16mm 0mm 0mm;
   }
 
-  .left-section--container {
-    border: none !important;
-  }
   .basics {
     grid-template-columns: 1fr 1fr !important;
-    gap: 5em !important;
     align-items: flex-start !important;
     padding-top: 0;
   }
-  .main-div {
-    display: grid;
-    grid-template-columns: 1fr 1fr !important;
+
+  * {
+    border: none !important;
   }
-  .left-container__sub-header__subtitle::after {
-    content: none !important;
-    margin-left: 0 !important;
+  
+ .main-div {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr !important;
   }
   .picture {
     justify-content: left !important;
@@ -155,9 +152,14 @@ body {
     display: flex !important;
     flex-wrap: wrap !important;
   }
+  .left-section--container {
+    display: flex !important;
+    flex-direction: column;
+  }
   .right-section--container {
-    gap: 0 !important;
-    margin-right: var(--m-2);
+    display: flex !important;
+    flex-direction: column;
+    gap: 5em !important;
   }
   .publications,
   .volunteer,
@@ -168,20 +170,24 @@ body {
     border-left: none !important;
     padding: 0 !important;
     margin: 0 !important;
+    gap: 0;
   }
   .article-container--border {
-    border: none !important;
     padding: 0 !important;
   }
+
+  .volunteer {
+    margin-top: 5em;
+  }
+ 
   .footer, .footer-space {
-    height: 2.5em;
+    height: 2.5em !important;
   }
   .footer {
     position: fixed;
     bottom: 0;
     left: 50%;
     transform: translate(-45%);
-    overflow: visible !important;
   }
   .contact--details--print{
     display: flex !important;
@@ -191,7 +197,7 @@ body {
   }
   .article__url--print {
     margin: 0 1em !important;
-  }
+  } 
 }
 
 @media screen {
@@ -230,6 +236,7 @@ h4 {
   margin: var(--mb-1-5) 0 0;
 }
 ul {
+  margin: 0;
   padding: 0;
 }
 li {
@@ -248,7 +255,7 @@ section {
   padding: 2rem 0 4rem;
 }
 .section__title {
-  position: relative;
+
   font-size: var(--h1-font-size);
   color: var(--article-title);
   font-weight: var(--font-700);
