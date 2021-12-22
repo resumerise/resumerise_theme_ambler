@@ -208,6 +208,9 @@ body {
   .references {
     margin-top: 5em !important;
   }
+  .no-gap-article-container {
+    gap: 0 !important;
+  }
 }
 
 @media screen {
@@ -843,4 +846,8 @@ img {
 
 .basics__article__text {
   margin: var(--mb-0-75) 0;
+}
+
+.no-gap-article-container {
+  gap: 0;
 }

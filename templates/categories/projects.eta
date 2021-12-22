@@ -2,7 +2,7 @@
 	<% if (it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle) { %>
 		<header class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></header>
 	<% } %>
-	<div class="article-container grid">
+	<div class="article-container grid no-gap-article-container">
 		<% it.resume?.projects.forEach(function(project) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.project, showDelete: true, id: project.id}) %>

@@ -4,7 +4,7 @@
 			<%= it.resume.settings.labels.categoryProperty.education.categoryTitle %>
 		</header>
 	<% } %>
-	<div class="article-container grid">
+	<div class="article-container grid no-gap-article-container">
 		<% it.resume?.education.forEach(function(education) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.education, showDelete: true, id: education.id}) %>
