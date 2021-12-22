@@ -13,10 +13,16 @@
 	<body>
 
 <table>
-  <thead><tr><td>
+  <thead>
+  <tr>
+  <td>
     <div class="header-space">&nbsp;</div>
-  </td></tr></thead>
-  <tbody><tr><td>
+  </tr>
+  </td>
+  </thead>
+  <tbody>
+  <tr>
+  <td>
     <div class="content">
 	
 	<main>
@@ -105,10 +111,16 @@
 		</main>
 	
 	</div>
-  </td></tr></tbody>
-  <tfoot><tr><td>
+	</tr>
+  </td>
+  </tbody>
+  <tfoot>
+  <tr>
+  <td>
     <div class="footer-space">&nbsp;</div>
-  </td></tr></tfoot>
+	</tr>
+  </td>
+  </tfoot>
 </table>
 
 		<div class="footer">
