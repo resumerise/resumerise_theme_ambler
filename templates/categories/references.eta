@@ -4,7 +4,7 @@
 			<%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %>
 		</header>
 	<% } %>
-	<div class="article-container grid">
+	<div class="article-container grid no-gap-article-container">
 		<% it.resume?.references.forEach(function(reference) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.reference, id: reference.id, showDelete: true}) %>
@@ -12,15 +12,19 @@
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.reference?.name, 
 						value: reference.name,
-						classes: 'article__title'
+						classes: 'article__title left-container__title--marker'
 					}) %>
 				</div>
+				<div class="article-container--border">
+				<div class="article-sub-header left-container__sub-header">
 				<div class="article-content s-grid">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.reference?.reference, 
 						value: reference.reference,
-						classes: 'article__subtitle'
+						classes: 'article__text left-container__summary references__text'
 					}) %>
+				</div>
+				</div>
 				</div>
 			</article>
 		<% }) %>

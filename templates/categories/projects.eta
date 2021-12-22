@@ -2,7 +2,7 @@
 	<% if (it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle) { %>
 		<header class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></header>
 	<% } %>
-	<div class="article-container grid">
+	<div class="article-container grid no-gap-article-container">
 		<% it.resume?.projects.forEach(function(project) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.project, showDelete: true, id: project.id}) %>
@@ -10,32 +10,36 @@
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
 						value: project.title,
-						classes: 'article__title'
+						classes: 'article__title left-container__title--marker'
 					}) %>
+				</div>
+				<div  class="article-container--border">
+                <div class="article-sub-header left-container__sub-header">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
 						value: project.client,
-						classes: 'article__subtitle'
+						classes: 'article__subtitle left-container__sub-header__subtitle'
 					}) %>
-					<%~ include('key-url-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.project?.website, 
-						value: project.website,
-						classes: 'article__url'
-					}) %>
+					
 					<%~ include('date-range', {
 						formatDate: it.formatDate,
 						startDate: project.startDate,
 						endDate: project.endDate,
 						present: project.present,
 						settings: it.resume.settings,
-						classes: 'article__date'
+						classes: 'article__date left-container__sub-header__date'
 					}) %>
-				</div>
+					</div>
+						<%~ include('key-url-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.project?.website, 
+						value: project.website,
+						classes: 'article__url'
+					}) %>
 				<div class="article-content s-grid">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.project?.summary, 
 						value: project.summary,
-						classes: 'article__text'
+						classes: 'article__text left-container__summary'
 					}) %>
 					<%~ include('list', {
 						label: it.resume.settings?.labels?.categoryProperty?.project?.products, 
@@ -55,7 +59,8 @@
 						showLabel: true,
 						classes: 'article__list'
 					}) %>
-				</div>
+					  </div>
+                </div>			
 			</article>
 		<% }) %>
 		<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.project}) %>
