@@ -1,13 +1,14 @@
 import { ResumeriseMeta } from "resumerise_library/mod.ts";
 
 export const meta = {
-  colors: ["#000", "#fff"],
-  description: "A starter template for resumerise.",
-  name: "resumerise_theme_retro",
+  colors: ["#000000", "#808080"],
+  description:
+    "Clean is a magazine style theme with subtle rounded edges and clean typography.",
   platforms: ["DESKTOP", "INTERACTIVE", "MOBILE", "PRINT"],
-  tags: ["starter", "blueprint", "retro"],
-  categories: ["EDUCATION"],
-  styles: ["CLEAN", "MINIMAL"],
+  tags: ["classic", "magazine", "clean"],
+  categories: ["ACADEMIC", "BUSINESS"],
+  styles: ["CLEAN", "MINIMAL", "BORDER", "SIMPLE"],
   author: "resumerise",
   authorWebUrl: "http://resumerise.io",
+  subscription: "FREE",
 } as ResumeriseMeta;
