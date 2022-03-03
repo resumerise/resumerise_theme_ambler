@@ -23,8 +23,7 @@
 						classes: 'article__subtitle left-container__sub-header__subtitle'
 					}) %>
 					
-					<%~ include('date-range', {
-						formatDate: it.formatDate, 
+					<%~ include('date-range', { 
 						startDate: education.startDate,
 						endDate: education.endDate,
 						present: education.present,
