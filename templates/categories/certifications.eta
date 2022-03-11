@@ -5,7 +5,7 @@
 
 	<div class="article-container grid">
 		<% it.resume?.certifications.forEach(function(certificate) { %>
-			<article class="with-header-date c-h grid">
+			<article class="grid">
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.certificate, showDelete: true, id: certificate.id}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
