@@ -1,8 +1,6 @@
 import * as eta from "https://deno.land/x/eta@v1.6.0/mod.ts";
 import {
-  CompileException,
   getAddItemTemplatePath,
-  getFileContent,
   getNavTemplatePath,
   getProfileItem,
   getWidgetCSSFilePath,
@@ -12,8 +10,13 @@ import {
   getWidgetKeyValuePairFilePath,
   getWidgetListFilePath,
   getWidgetSkillListFilePath,
-} from "resumerise_library/mod.ts";
-import { Resume } from "resumerise_library/codegen/model/resume.ts";
+} from "./theme-library.ts";
+
+import {
+  Resume,
+  CompileException,
+  getFileContent
+} from "./core-library.ts";
 
 export const render = async (
   resume: Resume,
@@ -24,7 +27,7 @@ export const render = async (
       "./templates/layout.eta",
       import.meta.url,
     );
-    const mainCss = await getFileContent("./css/main.css", import.meta.url);
+    const mainCss = await getFileContent("./css/style.css", import.meta.url);
     const awardTemplateName = "awards";
     eta.templates.define(
       awardTemplateName,
@@ -320,7 +323,7 @@ export const render = async (
       orderedMap.set(resumeCategory, map.get(resumeCategory)!);
     });
     const result = await eta.render(layout, {
-      css: css,
+      mainCss: mainCss,
       widgetCss: widgetCss,
       resume: resume,
       type: type,

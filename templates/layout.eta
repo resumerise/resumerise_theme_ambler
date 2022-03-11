@@ -5,21 +5,18 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 		<title><%= it.resume.basics?.name ? it.resume.basics.name : ''%></title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 		<% if (it.type === 'PRINT') { %>
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/@leisn/tocjs@0.1.0/dist/toc.min.js"></script>
 			<script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
 		<% } %>
-
 		<style>
 			<%~ it.mainCss %>
 			<%~ it.widgetCss %>
 		</style>
-
 	</head>
 	<body>
-		<main class="main">
+		<main>
 			<% if (it.type === 'PRINT') { %>
 				<!-- cover Page -->
 				<%~ include("cover", {
@@ -111,7 +108,6 @@
 				resume: it.resume
 			}) %>
 		</main>
-
 		<script>
 			<% if (it.type === 'PRINT') { %>
 				function createToc(config) {
@@ -131,6 +127,7 @@
 						let titleHierarchy = i + 1;
 						let titleElement = content.querySelectorAll(titleElements[i]);
 
+
 						titleElement.forEach(function (element) {
 
 							// add classes to the element
@@ -143,9 +140,10 @@
 							if (idElement == '') {
 								element.id = 'title-element-' + tocElementNbr;
 							}
-
 							let newIdElement = element.id;
+
 						});
+
 					}
 
 					// create toc list
@@ -153,6 +151,7 @@
 
 					for (var i = 0; i < tocElements.length; i++) {
 						let tocElement = tocElements[i];
+
 						let tocNewLi = document.createElement("li");
 
 						// Add class for the hierarcy of toc
@@ -166,7 +165,6 @@
 								tocNewLi.classList.add(classTocElement[n]);
 							}
 						}
-
 						// Create the element
 						tocNewLi.innerHTML = '<a href="#' + tocElement.id + '">' + tocElement.innerHTML + '</a>';
 						tocUl.appendChild(tocNewLi);
@@ -186,7 +184,6 @@
 						});
 					}
 				};
-
 				Paged.registerHandlers(handlers);
 			<% } %>
 		</script>

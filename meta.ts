@@ -1,12 +1,12 @@
-import { ResumeriseMeta } from "resumerise_library/mod.ts";
+import { ResumeriseMeta } from "./core-library.ts";
 
 export const meta = {
   colors: ["#000", "#fff"],
-  description: "Clean is a magazine style theme with subtle rounded edges and clean typography.",
+  description: "A starter template for resumerise.",
   platforms: ["DESKTOP", "INTERACTIVE", "MOBILE", "PRINT"],
-  tags: ["classic", "magazine", "clean"],
-  categories: ["ACADEMIC", "BUSINESS"],
-  styles: ["CLEAN", "MINIMAL", "BORDER", "SIMPLE"],
+  tags: ["starter", "blueprint", "retro"],
+  categories: ["EDUCATION"],
+  styles: ["CLEAN", "MINIMAL"],
   author: "resumerise",
-  authorWebUrl: "http://resumerise.io"
+  authorWebUrl: "http://resumerise.io",
 } as ResumeriseMeta;
