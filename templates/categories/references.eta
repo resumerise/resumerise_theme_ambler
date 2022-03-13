@@ -5,7 +5,7 @@
 
 	<div class="article-container grid">
 		<% it.resume?.references.forEach(function(reference) { %>
-			<article class="r-c">
+			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.reference, id: reference.id, showDelete: true}) %>
 				<div class="article-header">
 					<%~ include('key-value-item', {

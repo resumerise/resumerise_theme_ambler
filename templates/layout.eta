@@ -73,11 +73,10 @@
 						resume: it.resume
 					}) %>
 					
-					<!-- AWARDS -->
-					<%~ include("awards", {
+					<!-- PROFILE -->
+					<%~ include("profile", {
 						resume: it.resume
 					}) %>
-					
 				</div>
 
 				<div>
@@ -111,8 +110,8 @@
 						resume: it.resume
 					}) %>
 
-					<!-- PROFILE -->
-					<%~ include("profile", {
+					<!-- AWARDS -->
+					<%~ include("awards", {
 						resume: it.resume
 					}) %>
 				</div>

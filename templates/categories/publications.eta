@@ -6,29 +6,31 @@
     <div class="article-container grid">
         <% it.resume?.publications.forEach(function(publication) { %>
             <article class="grid">
-                <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.publication, id: publication.id, showDelete: true}) %>
-                <%~ include('key-value-item', {
-                    label: it.resume.settings?.labels?.categoryProperty?.publication?.releaseDate, 
-                    value: publication.releaseDate,
-                    classes: 'article__date'
-                }) %>
+                <div>
+                    <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.publication, id: publication.id, showDelete: true}) %>
+                    <%~ include('key-value-item', {
+                        label: it.resume.settings?.labels?.categoryProperty?.publication?.releaseDate, 
+                        value: publication.releaseDate,
+                        classes: 'article__date no-flex'
+                    }) %>
 
-                <div class="article-header">
-                    <%~ include('key-value-item', {
-                        label: it.resume.settings?.labels?.categoryProperty?.publication?.name, 
-                        value: publication.name,
-                        classes: 'article__title'
-                    }) %>
-                    <%~ include('key-value-item', {
-                        label: it.resume.settings?.labels?.categoryProperty?.publication?.publisher, 
-                        value: publication.publisher,
-                        classes: 'article__subtitle'
-                    }) %>
-                    <%~ include('key-url-item', {
-                        label: it.resume.settings?.labels?.categoryProperty?.publication?.website, 
-                        value: publication.website,
-                        classes: 'article__url'
-                    }) %>
+                    <div class="article-header">
+                        <%~ include('key-value-item', {
+                            label: it.resume.settings?.labels?.categoryProperty?.publication?.name, 
+                            value: publication.name,
+                            classes: 'article__title'
+                        }) %>
+                        <%~ include('key-value-item', {
+                            label: it.resume.settings?.labels?.categoryProperty?.publication?.publisher, 
+                            value: publication.publisher,
+                            classes: 'article__subtitle'
+                        }) %>
+                        <%~ include('key-url-item', {
+                            label: it.resume.settings?.labels?.categoryProperty?.publication?.website, 
+                            value: publication.website,
+                            classes: 'article__url'
+                        }) %>
+                    </div>
                 </div>
 
                 <div class="article-content no-m">
