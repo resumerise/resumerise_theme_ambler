@@ -149,7 +149,6 @@
   /* Social icons gap */
   --profiles-icon-gap: 2em;
 
-
   /*~~~~~~~~~~ z-index ~~~~~~~~~~*/
   --z-tooltip: 10;
   --z-fixed: 100;
@@ -262,8 +261,7 @@ a {
 
 /*======================================== LAYOUT ========================================*/
 .main {
-  background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(90deg, rgb(195, 195, 195), rgb(228, 228, 228));
-  background-blend-mode: overlay, overlay, overlay, normal;
+  background-image: linear-gradient(359deg, rgba(92, 88, 88, 0.02) 0%, rgba(92, 88, 88, 0.02) 8%, transparent 8%, transparent 27%, rgba(152, 152, 152, 0.02) 27%, rgba(152, 152, 152, 0.02) 80%, rgba(61, 48, 48, 0.02) 80%, rgba(61, 48, 48, 0.02) 100%), linear-gradient(250deg, rgba(9, 9, 9, 0.02) 0%, rgba(9, 9, 9, 0.02) 33%, transparent 33%, transparent 40%, rgba(240, 240, 240, 0.02) 40%, rgba(240, 240, 240, 0.02) 68%, rgba(141, 141, 141, 0.02) 68%, rgba(141, 141, 141, 0.02) 100%), linear-gradient(107deg, rgba(229, 229, 229, 0.02) 0%, rgba(229, 229, 229, 0.02) 12%, transparent 12%, transparent 24%, rgba(89, 89, 89, 0.02) 24%, rgba(89, 89, 89, 0.02) 38%, rgba(206, 206, 206, 0.02) 38%, rgba(206, 206, 206, 0.02) 100%), linear-gradient(64deg, rgba(129, 121, 121, 0.02) 0%, rgba(129, 121, 121, 0.02) 33%, transparent 33%, transparent 73%, rgba(191, 191, 191, 0.02) 73%, rgba(191, 191, 191, 0.02) 78%, rgba(83, 83, 83, 0.02) 78%, rgba(83, 83, 83, 0.02) 100%), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
 .section {
@@ -613,6 +611,7 @@ header {
 
 /*~~~~~~~~~~~~~ DESKTOP ~~~~~~~~~~~~~*/
 @media screen and (max-width: 768px) {
+
   .with-header-date-logo .article__date,
   .with-header-date .article__date {
     margin-bottom: .5rem;
@@ -647,11 +646,9 @@ header {
 
 /*~~~~~~~~~~~~~ > TABLETS + DESKTOP & PRINT ~~~~~~~~~~~~~*/
 @media print, screen and (min-width: 768px) {
+
   /* article */
   :is(.references, .publications, .awards) .article-container,
-  /* .references .article-container,
-  .publications .article-container,
-  .awards .article-container, */
   .with-header-date-logo,
   .with-header-date {
     position: relative;
@@ -659,9 +656,6 @@ header {
 
   /* article::before, */
   :is(.references, .publications, .awards) .article-container::before,
-  /* .references .article-container::before,
-  .publications .article-container::before,
-  .awards .article-container::before, */
   .with-header-date-logo::before,
   .with-header-date::before {
     content: '';
@@ -675,35 +669,16 @@ header {
   }
 
   :is(.references, .publications, .awards) .article-container::before {
-    /* .references .article-container::before,
-  .publications .article-container::before,
-  .awards .article-container::before { */
     top: 0px;
     left: -22px;
   }
 
-  /* .references article:last-of-type::before,
-  .publications article:last-of-type::before,
-  .awards article:last-of-type::before {
-    content: none;
-    width: 0;
-    background-color: transparent;
-    height: 0;
-    display: none;
-  } */
-
-  /* .references .article-container .article__title, */
-  /* .publications .article-container .article__title, */
-  /* .awards .article-container .article__title, */
   .with-header-date-logo .article__title,
   .with-header-date .article__title {
     display: list-item;
   }
 
   .article__title::marker {
-    /* .references .article__title::marker, */
-    /* .publications .article__title::marker, */
-    /* .awards .article__title::marker { */
     font-size: 130%;
     color: var(--home-sub-title-color);
   }
@@ -777,7 +752,6 @@ header {
 @media print {
   .main {
     background-image: none;
-    background-blend-mode: normal;
   }
 
   .main-wrapper {
@@ -786,10 +760,8 @@ header {
     margin: 0;
     gap: 0;
   }
-
-  .references article,
-  .publications article,
-  .awards article,
+  
+  :is(.awards, .references, .publications) article,
   .with-header-date-logo .article__title,
   .with-header-date .article__title {
     display: initial;
@@ -1082,20 +1054,20 @@ header {
 }
 
 /*======================================== INTERACTIVE ========================================*/
-/* .INTERACTIVE .nav-add {
-    margin-top: 1em;
-    margin-bottom: 2em;
+.INTERACTIVE .nav-add {
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 .INTERACTIVE .profiles article {
-    padding: 2em 0;
+  padding: 2em 0;
 }
 
 .INTERACTIVE .profiles .article-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 html:not(.INTERACTIVE) .profiles article .profile-item {
-    display: inline-block;
-} */
+  display: inline-block;
+}
