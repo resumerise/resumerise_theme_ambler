@@ -760,7 +760,7 @@ header {
     margin: 0;
     gap: 0;
   }
-  
+
   :is(.awards, .references, .publications) article,
   .with-header-date-logo .article__title,
   .with-header-date .article__title {
@@ -771,6 +771,10 @@ header {
   .basics {
     display: none;
     user-select: none;
+  }
+
+  :is(.skills, .languages, .interests) .article-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .pagedjs_margin {
