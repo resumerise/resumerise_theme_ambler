@@ -24,6 +24,7 @@
 				</div>
 			</article>
 		<% }) %>
+		
 		<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.reference}) %>
 	</div>
 </section>

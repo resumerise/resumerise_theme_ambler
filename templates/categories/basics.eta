@@ -2,6 +2,7 @@
     <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
         <header class="section__title section--hide-toc"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></header>
     <% } %>
+    
     <div class="article-container container grid">
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.basics}) %>
 

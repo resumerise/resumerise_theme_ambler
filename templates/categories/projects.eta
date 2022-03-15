@@ -74,6 +74,7 @@
 						showLabel: true,
 						classes: 'article__list skills'
 					}) %>
+					
 					<% if (project.otherUrls) { %>
 						<div class="article__list other-urls">
 							<label class="list__label">

@@ -55,6 +55,7 @@
 				</div>
 			</article>
 		<% }) %>
+		
 		<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer}) %>
 	</div>
 </section>

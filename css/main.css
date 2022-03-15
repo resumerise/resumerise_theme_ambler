@@ -170,7 +170,7 @@
 }
 
 /*======================================== BASE ========================================*/
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -241,7 +241,6 @@ a {
   color: var(--content-text-color);
   text-decoration: none;
 }
-
 
 .avoid-break-inside {
   display: block !important;
