@@ -1,6 +1,6 @@
 <section class="basics section" id='basics'>
     <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
-        <header class="section__title section--hide-toc"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></header>
+        <header class="section--hide-toc"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></header>
     <% } %>
     
     <div class="article-container container grid">

@@ -5,7 +5,7 @@
 
 	<div class="article-container grid">
 		<% it.resume?.awards.forEach(function(award) { %>
-			<article class="grid g-1">
+			<article class="grid">
 				<div>
 					<%~ include('nav', {categoryKey: it.resume.settings?.categoryKeys?.award, id: award.id, showDelete: true}) %>
 					<%~ include('key-value-item', {
@@ -34,11 +34,11 @@
 				</div>
 
 				<div class="article-content no-m">
-				<%~ include('key-value-item', {
-					label: it.resume.settings?.labels?.categoryProperty?.award?.summary, 
-					value: award.summary,
-					classes: 'article__description'
-				}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.award?.summary, 
+						value: award.summary,
+						classes: 'article__description'
+					}) %>
 				</div>
 			</article>
 		<% }) %>

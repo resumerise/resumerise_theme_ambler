@@ -30,5 +30,6 @@
 			</article>
 		<% }) %>
 	</div>
+	
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.certificate}) %>
 </section>
