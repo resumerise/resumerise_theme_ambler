@@ -434,8 +434,12 @@ header {
 
 .skill-rating>div {
   height: 100%;
-  border-radius: var(--skill-rating-border-radius);
   background-color: var(--first-color-second);
+  border-radius: var(--skill-rating-border-radius);
+  -webkit-border-radius: var(--skill-rating-border-radius);
+  -moz-border-radius: var(--skill-rating-border-radius);
+  -ms-border-radius: var(--skill-rating-border-radius);
+  -o-border-radius: var(--skill-rating-border-radius);
 }
 
 /* ======================================== HOME ======================================== */
